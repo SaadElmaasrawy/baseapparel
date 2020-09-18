@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.container {
+    display: grid;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    grid-template-columns: 60% 40%;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+/* right */
+
+.right {
+    background-image: url('../images/hero-desktop.jpg');
+    height: 800px; /* height of the image */
+}
+
+/* left */
+
+.left {
+    padding-left: 20%;
+    padding-top: 10%;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.span-1 {
+    color: hsl(0, 36%, 70%);
+    font-size: 60px;
+    letter-spacing: 20px;
+    font-weight: 300;
+}
+
+.span-2 {
+    color:hsl(0, 6%, 24%);
+    font-weight: 600;
+    font-size: 60px;
+    letter-spacing: 20px;
+}
+
+.span-3 {
+    color: hsl(0, 36%, 70%);
+    position: relative;
+    top: 40px;
+    line-height: 30px;
+}
+
+p {
+    margin-top: 100px;
+}
+
+.email-div {
+    position: relative;
+    top: 80px;
+}
+
+.email-div input {
+    width: 33em;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid rgba(206, 151, 151, 0.4);
+    background-color: transparent;
+    
+}
+
+.email-btn {
+    width: 7em;
+    height: 52px;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    right:200px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+::placeholder {
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(0, 36%, 70%);
+    opacity: 60%;
+}
+
+/* responsive */
+@media only screen and (max-width: 600px){
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 100%, 98%);
+    }
+    .right{
+        background-image: url('../images/hero-mobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 450px;
+        order: 1;
+        position: relative;
+        top: 100px;
+    }
+    .left {
+        background-image: none;
+        order: 2;
+        background-color: hsl(0, 100%, 98%);
+        height: 600px;
+    }
+    .logo {
+        position: relative;
+        top: -460px;
+    }
+    .span-1 {
+        font-size: 40px;
+    }
+    .span-2 {
+        font-size: 40px;
+    }
+    .span-3 {
+        font-size: 14px;
+    }
+
+    .email-div input {
+        width: 300px;
+    }
+    .email-btn{
+        right: 100px;
+        width: 80px;
+    }
+}
